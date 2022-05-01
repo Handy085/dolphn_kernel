@@ -5,7 +5,7 @@ function compile()
 
 source ~/.bashrc && source ~/.profile
 export LC_ALL=C && export USE_CCACHE=1
-ccache -M 70G
+ccache -M 120G
 export ARCH=arm64
 export KBUILD_BUILD_HOST=GearCI
 export KBUILD_BUILD_USER="DPSLEGEND"
