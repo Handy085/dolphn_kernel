@@ -1,3 +1,32 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/workspace/kernel_realme_moon'
+ 
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+grep: .config: No such file or directory
+
+  HOSTCC  scripts/basic/fixdep
+ 
+  HOSTCC  scripts/kconfig/conf.o
+ 
+  SHIPPED scripts/kconfig/zconf.tab.c
+ 
+  SHIPPED scripts/kconfig/zconf.lex.c
+ 
+  HOSTCC  scripts/kconfig/zconf.tab.o
+ 
   HOSTLD  scripts/kconfig/conf
  
 scripts/kconfig/conf  --silentoldconfig Kconfig
@@ -33,9 +62,9 @@ echo '  WRAP    arch/arm64/include/generated/uapi/asm/poll.h'; echo "#include <a
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/resource.h'; echo "#include <asm-generic/resource.h>" >arch/arm64/include/generated/uapi/asm/resource.h
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/sembuf.h'; echo "#include <asm-generic/sembuf.h>" >arch/arm64/include/generated/uapi/asm/sembuf.h
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/shmbuf.h'; echo "#include <asm-generic/shmbuf.h>" >arch/arm64/include/generated/uapi/asm/shmbuf.h
- 
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/socket.h'; echo "#include <asm-generic/socket.h>" >arch/arm64/include/generated/uapi/asm/socket.h
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/sockios.h'; echo "#include <asm-generic/sockios.h>" >arch/arm64/include/generated/uapi/asm/sockios.h
+ 
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/swab.h'; echo "#include <asm-generic/swab.h>" >arch/arm64/include/generated/uapi/asm/swab.h
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/termbits.h'; echo "#include <asm-generic/termbits.h>" >arch/arm64/include/generated/uapi/asm/termbits.h
 echo '  WRAP    arch/arm64/include/generated/uapi/asm/termios.h'; echo "#include <asm-generic/termios.h>" >arch/arm64/include/generated/uapi/asm/termios.h
@@ -57,6 +86,7 @@ echo '  WRAP    arch/arm64/include/generated/asm/emergency-restart.h'; echo "#in
 echo '  WRAP    arch/arm64/include/generated/asm/hw_irq.h'; echo "#include <asm-generic/hw_irq.h>" >arch/arm64/include/generated/asm/hw_irq.h
 echo '  WRAP    arch/arm64/include/generated/asm/irq_regs.h'; echo "#include <asm-generic/irq_regs.h>" >arch/arm64/include/generated/asm/irq_regs.h
 echo '  WRAP    arch/arm64/include/generated/asm/kdebug.h'; echo "#include <asm-generic/kdebug.h>" >arch/arm64/include/generated/asm/kdebug.h
+ 
 echo '  WRAP    arch/arm64/include/generated/asm/kmap_types.h'; echo "#include <asm-generic/kmap_types.h>" >arch/arm64/include/generated/asm/kmap_types.h
 echo '  WRAP    arch/arm64/include/generated/asm/local.h'; echo "#include <asm-generic/local.h>" >arch/arm64/include/generated/asm/local.h
 echo '  WRAP    arch/arm64/include/generated/asm/local64.h'; echo "#include <asm-generic/local64.h>" >arch/arm64/include/generated/asm/local64.h
@@ -74,11 +104,11 @@ echo '  WRAP    arch/arm64/include/generated/asm/switch_to.h'; echo "#include <a
 echo '  WRAP    arch/arm64/include/generated/asm/trace_clock.h'; echo "#include <asm-generic/trace_clock.h>" >arch/arm64/include/generated/asm/trace_clock.h
 echo '  WRAP    arch/arm64/include/generated/asm/unaligned.h'; echo "#include <asm-generic/unaligned.h>" >arch/arm64/include/generated/asm/unaligned.h
 echo '  WRAP    arch/arm64/include/generated/asm/user.h'; echo "#include <asm-generic/user.h>" >arch/arm64/include/generated/asm/user.h
-echo '  WRAP    arch/arm64/include/generated/asm/vga.h'; echo "#include <asm-generic/vga.h>" >arch/arm64/include/generated/asm/vga.h
  
+echo '  WRAP    arch/arm64/include/generated/asm/vga.h'; echo "#include <asm-generic/vga.h>" >arch/arm64/include/generated/asm/vga.h
 :
  
-set -e; echo '  CHK     include/generated/uapi/linux/version.h'; mkdir -p include/generated/uapi/linux/; 	(echo \#define LINUX_VERSION_CODE 265949; echo '#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))';) < Makefile > include/generated/uapi/linux/version.h.tmp; if [ -r include/generated/uapi/linux/version.h ] && cmp -s include/generated/uapi/linux/version.h include/generated/uapi/linux/version.h.tmp; then rm -f include/generated/uapi/linux/version.h.tmp; else echo '  UPD     include/generated/uapi/linux/version.h'; mv -f include/generated/uapi/linux/version.h.tmp include/generated/uapi/linux/version.h; fi
+set -e; echo '  CHK     include/generated/uapi/linux/version.h'; mkdir -p include/generated/uapi/linux/; 	(echo \#define LINUX_VERSION_CODE 265954; echo '#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))';) < Makefile > include/generated/uapi/linux/version.h.tmp; if [ -r include/generated/uapi/linux/version.h ] && cmp -s include/generated/uapi/linux/version.h include/generated/uapi/linux/version.h.tmp; then rm -f include/generated/uapi/linux/version.h.tmp; else echo '  UPD     include/generated/uapi/linux/version.h'; mv -f include/generated/uapi/linux/version.h.tmp include/generated/uapi/linux/version.h; fi
 rm -f include/linux/version.h
  
 make -f ./scripts/Makefile.build obj=scripts/basic
