@@ -42,4 +42,5 @@ curl -v -F "chat_id=1478995427" -F document=@Test-DolphinKernel-moon.zip https:/
 
 }
 compile
-zupload
+#zupload
+teleup
