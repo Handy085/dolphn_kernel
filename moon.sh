@@ -1,5 +1,6 @@
 #!/bin/bash
 rm -rf AnyKernel
+export TOKEN=
 function compile() 
 {
 
@@ -36,7 +37,7 @@ curl -sL https://git.io/file-transfer | sh
 }
 
 function teleup(){
-curl -v -F "chat_id=1478995427" -F document=@Test-DolphinKernel-moon.zip https://api.telegram.org/bot6980281066:AAGLZTbAGdEh1lh40pA2Dycuwkf4CrWaVq8/sendDocument
+curl -v -F "chat_id=1478995427" -F document=@Test-DolphinKernel-moon.zip https://api.telegram.org/bot$TOKEN/sendDocument
 
 
 }
