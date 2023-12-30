@@ -1,6 +1,7 @@
 #!/bin/bash
 rm -rf AnyKernel
-export TOKEN=
+#hi
+export TOKEN=6980281066:AAGLZTbAGdEh1lh40pA2Dycuwkf4CrWaVq8
 function compile() 
 {
 
@@ -8,8 +9,8 @@ source ~/.bashrc && source ~/.profile
 export LC_ALL=C && export USE_CCACHE=1
 ccache -M 120G
 export ARCH=arm64
-export KBUILD_BUILD_HOST=RadiataAuto
-export KBUILD_BUILD_USER="weinn"
+export KBUILD_BUILD_HOST=Radiata
+export KBUILD_BUILD_USER="wein"
 git clone --depth=1 https://github.com/sarthakroy2002/android_prebuilts_clang_host_linux-x86_clang-6443078 clang
 git clone --depth=1 https://github.com/ghostrider-reborn/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7 los-4.9-64
 git clone --depth=1 https://github.com/MayuriLabs/linaro_arm-linux-gnueabihf-7.5 los-4.9-32
@@ -31,16 +32,17 @@ function zupload()
 git clone --depth=1 https://github.com/DPSLEGEND/Anykernel3.git -b moon AnyKernel
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 cd AnyKernel
-zip -r9 Test-DolphinKernel-moon.zip *
-curl -sL https://git.io/file-transfer | sh
-./transfer wet Test-DolphinKernel-moon.zip
+export KERNEL_NAMEZ="DolphinKernel-v4.14.245"
+zip -r9 "${KERNEL_NAMEZ}.zip" *
+#curl -sL https://git.io/file-transfer | sh
+#./transfer wet "${KERNEL_NAMEZ}"
 }
 
 function teleup(){
-curl -v -F "chat_id=1478995427" -F document=@Test-DolphinKernel-moon.zip https://api.telegram.org/bot$TOKEN/sendDocument
+curl -v -F "chat_id=1478995427" -F document=@"${KERNEL_NAMEZ}.zip" https://api.telegram.org/bot$TOKEN/sendDocument
 
 
 }
 compile
-#zupload
+zupload
 teleup
