@@ -167,8 +167,15 @@ static int mtk_rng_resume(struct device *dev)
 }
 
 static const struct dev_pm_ops mtk_rng_pm_ops = {
+<<<<<<< HEAD
 	SET_SYSTEM_SLEEP_PM_OPS(mtk_rng_suspend,
 				mtk_rng_resume)
+=======
+	SET_RUNTIME_PM_OPS(mtk_rng_runtime_suspend,
+			   mtk_rng_runtime_resume, NULL)
+	SET_SYSTEM_SLEEP_PM_OPS(pm_runtime_force_suspend,
+				pm_runtime_force_resume)
+>>>>>>> 253cad9a9560b39321c5c8ec3343838a01b3c787
 };
 
 #define MTK_RNG_PM_OPS (&mtk_rng_pm_ops)
