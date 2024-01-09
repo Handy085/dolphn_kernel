@@ -32,7 +32,7 @@ function zupload()
 git clone --depth=1 https://github.com/DPSLEGEND/Anykernel3.git -b moon AnyKernel
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 cd AnyKernel
-export KERNEL_NAMEZ="X-DolphinKernel-v4.14.265"
+export KERNEL_NAMEZ="X-DolphinKernel-v4.14.269"
 zip -r9 "${KERNEL_NAMEZ}.zip" *
 #curl -sL https://git.io/file-transfer | sh
 #./transfer wet "${KERNEL_NAMEZ}"
