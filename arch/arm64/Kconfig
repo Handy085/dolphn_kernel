@@ -466,6 +466,7 @@ config ARM64_ERRATUM_1024718
 
 	  If unsure, say Y.
 
+
 config ARM64_ERRATUM_1542418
 	bool "Cortex-A77: 1542418: The core might fetch a stale instruction from the L0 Macro-op"
 	default n
@@ -875,6 +876,7 @@ config ARM64_SSBD
 	  by speculative loads.
 
 	  If unsure, say Y.
+
 
 config ARM64_TAGGED_ADDR_ABI
 	bool "Enable the tagged user addresses syscall ABI"
