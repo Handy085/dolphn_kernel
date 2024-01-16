@@ -9,7 +9,7 @@ source ~/.bashrc && source ~/.profile
 export LC_ALL=C && export USE_CCACHE=1
 ccache -M 120G
 export ARCH=arm64
-export KBUILD_BUILD_HOST=Radiata
+export KBUILD_BUILD_HOST=RadiataCloud
 export KBUILD_BUILD_USER="wein"
 git clone --depth=1 https://github.com/sarthakroy2002/android_prebuilts_clang_host_linux-x86_clang-6443078 clang
 git clone --depth=1 https://github.com/ghostrider-reborn/prebuilts_gcc_linux-x86_aarch64_aarch64-linaro-7 los-4.9-64
@@ -32,7 +32,7 @@ function zupload()
 git clone --depth=1 https://github.com/DPSLEGEND/Anykernel3.git -b moon AnyKernel
 cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 cd AnyKernel
-export KERNEL_NAMEZ="X-DolphinKernel-v4.14.276"
+export KERNEL_NAMEZ="X-DolphinKernel-v4.14.280"
 zip -r9 "${KERNEL_NAMEZ}.zip" *
 #curl -sL https://git.io/file-transfer | sh
 #./transfer wet "${KERNEL_NAMEZ}"
