@@ -1342,10 +1342,12 @@ int clone_sg_table(const struct sg_table *source, struct sg_table *dest)
 		return -1;
 	}
 
+
 	d_sg = dest->sgl;
 	for_each_sg(source->sgl, s_sg, source->nents, i) {
 		memcpy(d_sg, s_sg, sizeof(*s_sg));
 		d_sg = sg_next(d_sg);
+
 	}
 
 	return 0;
